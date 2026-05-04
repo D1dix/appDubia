@@ -134,14 +134,14 @@ PRESETS = {
 # ZONAS DE DUBAI
 # ═══════════════════════════════════════════════════════════════════
 ZONAS = [
-    {"id":"downtown","name":"Downtown Dubai", "lat":25.1972,"lng":55.2744,"min":400000,"m2":22000,"desc":"Burj Khalifa · Lujo absoluto","emoji":"🏙️"},
-    {"id":"marina",  "name":"Dubai Marina",   "lat":25.0804,"lng":55.1404,"min":250000,"m2":16000,"desc":"Frente al mar · Cosmopolita","emoji":"⛵"},
-    {"id":"palm",    "name":"Palm Jumeirah",  "lat":25.1124,"lng":55.1390,"min":800000,"m2":35000,"desc":"Isla artificial · Ultra premium","emoji":"🌴"},
-    {"id":"business","name":"Business Bay",   "lat":25.1862,"lng":55.2914,"min":300000,"m2":18000,"desc":"Canal de Dubai · Negocios","emoji":"💼"},
-    {"id":"creek",   "name":"Creek Harbour",  "lat":25.2198,"lng":55.3524,"min":200000,"m2":14000,"desc":"Nuevo desarrollo · Gran potencial","emoji":"🌊"},
-    {"id":"jvc",     "name":"Jumeirah Village","lat":25.0549,"lng":55.2066,"min":120000,"m2":9000, "desc":"Accesible · Comunidad familiar","emoji":"🏡"},
-    {"id":"difc",    "name":"DIFC",           "lat":25.2124,"lng":55.2814,"min":350000,"m2":20000,"desc":"Distrito financiero internacional","emoji":"🏦"},
-    {"id":"jbr",     "name":"JBR Beach",      "lat":25.0759,"lng":55.1319,"min":280000,"m2":17000,"desc":"The Walk · Primera línea playa","emoji":"🏖️"},
+    {"id":"downtown","name":"Downtown Dubai", "lat":25.1972,"lng":55.2744,"min":350000,"m2":22000,"desc":"Burj Khalifa · Lujo absoluto","emoji":"🏙️"},
+    {"id":"marina",  "name":"Dubai Marina",   "lat":25.0804,"lng":55.1404,"min":200000,"m2":16000,"desc":"Frente al mar · Cosmopolita","emoji":"⛵"},
+    {"id":"palm",    "name":"Palm Jumeirah",  "lat":25.1124,"lng":55.1390,"min":600000,"m2":35000,"desc":"Isla artificial · Ultra premium","emoji":"🌴"},
+    {"id":"business","name":"Business Bay",   "lat":25.1862,"lng":55.2914,"min":250000,"m2":18000,"desc":"Canal de Dubai · Negocios","emoji":"💼"},
+    {"id":"creek",   "name":"Creek Harbour",  "lat":25.2198,"lng":55.3524,"min":150000,"m2":14000,"desc":"Nuevo desarrollo · Gran potencial","emoji":"🌊"},
+    {"id":"jvc",     "name":"Jumeirah Village","lat":25.0549,"lng":55.2066,"min":80000, "m2":9000, "desc":"Accesible · Comunidad familiar","emoji":"🏡"},
+    {"id":"difc",    "name":"DIFC",           "lat":25.2124,"lng":55.2814,"min":300000,"m2":20000,"desc":"Distrito financiero internacional","emoji":"🏦"},
+    {"id":"jbr",     "name":"JBR Beach",      "lat":25.0759,"lng":55.1319,"min":220000,"m2":17000,"desc":"The Walk · Primera línea playa","emoji":"🏖️"},
 ]
 
 # ═══════════════════════════════════════════════════════════════════
@@ -393,7 +393,7 @@ ratio  = (deudas / max(ingresos,1)) * 100
 c1     = patrimonio >= 30000
 c2     = ratio < 40
 c3     = score >= 650
-presupuesto = patrimonio * 0.6 + ingresos * 0.3
+presupuesto = patrimonio * 0.8 + ingresos * 2.5
 color  = '#10B981' if pct >= 60 else '#D4AF37' if pct >= 35 else '#ef4444'
 vtext  = 'Cliente viable' if pct >= 60 else 'Perfil borderline' if pct >= 35 else 'No viable'
 vcls   = 'badge-ok' if pct >= 60 else 'badge-maybe' if pct >= 35 else 'badge-no'
