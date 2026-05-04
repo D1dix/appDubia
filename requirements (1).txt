@@ -1,0 +1,10 @@
+streamlit>=1.40.0
+scikit-learn==1.5.2
+xgboost>=2.0.3
+joblib
+numpy
+pandas
+folium
+streamlit-folium
+imbalanced-learn
+pillow>=11.0.0
