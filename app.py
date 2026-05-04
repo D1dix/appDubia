@@ -57,10 +57,38 @@ section[data-testid="stSidebar"] { display:none; }
 
 st.markdown("""
 <div class="hdr">
-  <div><span class="logo">DUBAI <b>PROPTECH</b><span class="logo-sub">— Predicción de vivienda ideal por perfil socioeconómico</span></span></div>
-  <div class="tag">XGBoost Optimizado · AUC 0.9697 · 10K clientes</div>
+  <div style="display:flex;align-items:center;gap:16px">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <rect width="36" height="36" fill="#c9a84c" opacity="0.1"/>
+      <path d="M6 28 L6 16 L10 16 L10 10 L14 10 L14 6 L16 6 L16 10 L18 8 L20 10 L20 6 L22 6 L22 10 L26 10 L26 16 L30 16 L30 28 Z" fill="#c9a84c" opacity="0.9"/>
+      <rect x="14" y="20" width="4" height="8" fill="#0a0a0f" opacity="0.8"/>
+      <rect x="18" y="20" width="4" height="8" fill="#0a0a0f" opacity="0.8"/>
+      <circle cx="18" cy="8" r="1.5" fill="#e0bc60"/>
+    </svg>
+    <div>
+      <div class="logo">DUBAI <b>PROPTECH</b></div>
+      <div style="font-size:0.62rem;color:#6a6055;letter-spacing:2px;text-transform:uppercase;margin-top:1px">Predicción de vivienda ideal por perfil socioeconómico</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div style="text-align:right">
+      <div class="tag" style="margin-bottom:4px;display:inline-block">XGBoost Optimizado</div><br/>
+      <span style="font-size:0.58rem;color:#6a6055;letter-spacing:1px">AUC 0.9697 · F1-Score 0.8246 · 10K clientes</span>
+    </div>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="15" stroke="#c9a84c" stroke-width="1" opacity="0.4"/>
+      <path d="M16 4 L16 28 M4 16 L28 16" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/>
+      <circle cx="16" cy="16" r="6" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+      <circle cx="16" cy="16" r="2" fill="#c9a84c"/>
+      <path d="M16 10 L17.5 14 L16 13 L14.5 14 Z" fill="#c9a84c"/>
+    </svg>
+  </div>
 </div>
-<div class="subtitle">Introduce el perfil financiero del cliente · El modelo predice su viabilidad y recomienda zonas en Dubai en tiempo real</div>
+<div class="subtitle">
+  <span style="color:#c9a84c">◆</span>
+  &nbsp;Introduce el perfil financiero del cliente · El modelo XGBoost predice su viabilidad de compra y recomienda zonas en Dubai&nbsp;
+  <span style="color:#c9a84c">◆</span>
+</div>
 """, unsafe_allow_html=True)
 
 @st.cache_resource
@@ -196,7 +224,7 @@ with col_results:
             col_card='#4caf82' if perfecto else '#c9a84c'
             cards_html+=f"<div class='zone-card' style='border-left-color:{col_card}'><div class='zone-card-name' style='color:{col_card}'>{z['emoji']} {z['name']}</div><div class='zone-card-desc'>{z['desc']}</div><div class='zone-card-price' style='color:{col_card}'>desde ${z['min']:,}</div></div>"
         cards_html+="</div>"
-        st.markdown(cards_html,unsafe_allow_True=True)
+        st.markdown(cards_html,unsafe_allow_html=True)
     else:
         st.markdown("<div style='background:#13131e;border:1px solid #e24b4a22;padding:12px 16px;font-size:0.75rem;color:#8a8070'>Ninguna zona es asequible con el perfil actual. Mejora el patrimonio neto o reduce las deudas.</div>",unsafe_allow_html=True)
     st.markdown("</div>",unsafe_allow_html=True)
