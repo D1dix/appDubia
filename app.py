@@ -81,9 +81,10 @@ section[data-testid="stSidebar"], footer, header { display: none !important; }
 /* ── BOTÓN ── */
 .stButton > button {
   background:linear-gradient(135deg,#c9a020,#D4AF37,#c9a020) !important;
-  color:#080810 !important; border:none !important; border-radius:8px !important;
-  font-weight:700 !important; letter-spacing:2px !important; font-size:0.62rem !important;
-  text-transform:uppercase !important; padding:10px !important; width:100% !important;
+  color:#080810 !important; border:none !important; border-radius:20px !important;
+  font-weight:700 !important; letter-spacing:2px !important; font-size:0.58rem !important;
+  text-transform:uppercase !important; padding:7px 18px !important; width:auto !important;
+  display:block !important; margin:0 auto !important;
   transition:all 0.2s !important; box-shadow:0 2px 12px rgba(212,175,55,0.2) !important;
 }
 .stButton > button:hover { box-shadow:0 4px 20px rgba(212,175,55,0.4) !important; transform:translateY(-1px) !important; }
@@ -154,7 +155,7 @@ ZONE_ICONS = {
 PRESETS = [
     {"key":"whale",   "name":"Whale Investor",     "tag":"C-Level · Zonas ultra premium",         "icon":"whale",  "ingresos":850000,"patrimonio":4500000,"deudas":200000,"banco":900000,"score":820,"edad":55,"cat":"C-Level","interes":"Alto","edu":"PhD"},
     {"key":"expat",   "name":"Expat Ejecutivo",     "tag":"Senior Manager · Múltiples zonas",      "icon":"expat",  "ingresos":280000,"patrimonio":650000, "deudas":120000,"banco":180000,"score":760,"edad":42,"cat":"Director","interes":"Alto","edu":"Master"},
-    {"key":"tech",    "name":"Tech Founder",         "tag":"Emprendedor · Alto potencial",          "icon":"tech",   "ingresos":180000,"patrimonio":400000, "deudas":80000, "banco":120000,"score":720,"edad":34,"cat":"Senior","interes":"Alto","edu":"Master"},
+    {"key":"tech",    "name":"Consultor Senior",      "tag":"60-70% viable · Perfil medio-alto",     "icon":"tech",   "ingresos":160000,"patrimonio":180000, "deudas":52000, "banco":70000, "score":705,"edad":37,"cat":"Senior","interes":"Medio","edu":"Master"},
     {"key":"familia", "name":"Familia Profesional",  "tag":"Mid-Senior · Zonas residenciales",      "icon":"familia","ingresos":140000,"patrimonio":220000, "deudas":90000, "banco":60000, "score":700,"edad":38,"cat":"Senior","interes":"Medio","edu":"Licenciatura"},
     {"key":"joven",   "name":"Joven Profesional",    "tag":"Junior · Perfil borderline",            "icon":"joven",  "ingresos":75000, "patrimonio":40000,  "deudas":28000, "banco":12000, "score":672,"edad":27,"cat":"Mid-Level","interes":"Medio","edu":"Licenciatura"},
 ]
